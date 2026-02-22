@@ -1,0 +1,14 @@
+{
+  "name": "06_response_handler",
+  "version": "1.0.0",
+  "description": "Header-only response handler library; includes springbootplusplus_web",
+  "keywords": ["arduino", "web", "http", "response", "spring"],
+  "authors": [{"name": "Nayan"}],
+  "repository": {"type": "git", "url": "https://github.com/compilerNayan/06_response_handler.git"},
+  "dependencies": {
+    "springbootplusplus_web": "https://github.com/compilerNayan/springbootplusplus_web.git"
+  },
+  "license": "MIT",
+  "frameworks": "arduino",
+  "platforms": "*"
+}
