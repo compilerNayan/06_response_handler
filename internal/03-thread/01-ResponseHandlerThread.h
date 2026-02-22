@@ -15,7 +15,9 @@ class ResponseHandlerThread final : public IRunnable {
     Private IHttpRequestHandlerPtr httpRequestHandler;
 
     Public Void Run() override {
-        httpRequestHandler->HandleRequest();
+        while (true) {  
+            httpRequestHandler->HandleRequest()
+        }
     }
 };
 
