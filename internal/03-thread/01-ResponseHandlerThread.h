@@ -7,6 +7,7 @@
 #define RESPONSE_HANDLER_RESPONSE_HANDLER_THREAD_H
 
 #include <IRunnable.h>
+#include <Thread.h>
 #include "../01-interface/01-IHttpRequestHandler.h"
 
 class ResponseHandlerThread final : public IRunnable {
@@ -15,8 +16,9 @@ class ResponseHandlerThread final : public IRunnable {
     Private IHttpRequestHandlerPtr httpRequestHandler;
 
     Public Void Run() override {
-        while (true) {  
+        while (true) {
             httpRequestHandler->HandleRequest();
+            Thread::Sleep(100);  // yield so IDLE task runs; avoids task watchdog trigger
         }
     }
 };
